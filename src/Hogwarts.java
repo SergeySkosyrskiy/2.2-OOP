@@ -3,12 +3,16 @@ public class Hogwarts {
     private String lastName;
     private int powerOfMagic;
     private int transgressionDistance;
+    private final int id;
+    private static int Counter = 1;
 
     public Hogwarts(String name, String lastName, int powerOfMagic, int transgressionDistance) {
+        this.id = Counter++;
         this.name = name;
         this.lastName = lastName;
         this.powerOfMagic = powerOfMagic;
         this.transgressionDistance = transgressionDistance;
+
     }
 
     public String getName() {
@@ -27,13 +31,6 @@ public class Hogwarts {
         this.lastName = lastName;
     }
 
-  /*  public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }*/
 
     public int getPowerOfMagic() {
         return powerOfMagic;
@@ -49,6 +46,16 @@ public class Hogwarts {
 
     public void setTransgressionDistance(int transgressionDistance) {
         this.transgressionDistance = transgressionDistance;
+    }
+
+
+    @Override
+    public String toString() {
+        return super.toString() + "Name   " + name + lastName + powerOfMagic + transgressionDistance;
+    }
+
+    public int getId() {
+        return id;
     }
 
 }

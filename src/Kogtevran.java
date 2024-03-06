@@ -1,4 +1,4 @@
-public class Kogtevran extends Hogwarts{
+public class Kogtevran extends Hogwarts {
 
     private int smart;
     private int wise;
@@ -6,11 +6,16 @@ public class Kogtevran extends Hogwarts{
     private int fullOfCreativity;
 
     public Kogtevran(String name, String lastName, int powerOfMagic, int transgressionDistance, int smart, int wise, int witty, int fullOfCreativity) {
-        super(name,lastName,powerOfMagic,transgressionDistance);
+        super(name, lastName, powerOfMagic, transgressionDistance);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
         this.fullOfCreativity = fullOfCreativity;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + smart + wise + witty + fullOfCreativity;
     }
 
     public int getSmart() {

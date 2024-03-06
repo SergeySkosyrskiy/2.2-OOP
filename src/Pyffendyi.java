@@ -10,6 +10,11 @@ public class Pyffendyi extends Hogwarts {
         this.honest = honest;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+hardworking+loyal+honest;
+    }
+
     public int getHardworking() {
         return hardworking;
     }
