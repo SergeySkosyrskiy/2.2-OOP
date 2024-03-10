@@ -1,4 +1,4 @@
-public class Pyffendyi extends Hogwarts {
+public class Pyffendyi extends HogwartsStudents {
     private int hardworking;
     private int loyal;
     private int honest;
@@ -10,32 +10,21 @@ public class Pyffendyi extends Hogwarts {
         this.honest = honest;
     }
 
-    @Override
-    public String toString() {
-        return super.toString()+hardworking+loyal+honest;
-    }
-
     public int getHardworking() {
         return hardworking;
-    }
-
-    public void setHardworking(int hardworking) {
-        this.hardworking = hardworking;
     }
 
     public int getLoyal() {
         return loyal;
     }
 
-    public void setLoyal(int loyal) {
-        this.loyal = loyal;
-    }
-
     public int getHonest() {
         return honest;
     }
 
-    public void setHonest(int honest) {
-        this.honest = honest;
+    public String toString() {
+        return getName() +
+                getLastName();
     }
 }
+

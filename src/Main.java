@@ -1,39 +1,38 @@
 import java.util.Arrays;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //Hogwarts[] stydents = {
-       /* Griffindor griffindor = new Griffindor();
-        Griffindor harry = new Griffindor("Harry", "Potter", 100, 100, 100, 100, 100);
-        Griffindor hermione = new Griffindor("Hermione", "Granger", 100, 100, 100, 100, 100);
-*/
-        Hogwarts[] stydents = new Hogwarts[]{
-                new Griffindor("Harry", "Potter", 100, 100, 100, 100, 100),
-                new Griffindor("Hermione", "Granger", 100, 100, 100, 100, 100),
-                new Griffindor("Ron", "Weasley", 100, 100, 100, 100, 100),
 
-                new Slytherin("Draco", "Malfoy", 100, 100, 100, 100, 100, 100, 100),
-                new Slytherin("Graham", "Montague", 100, 100, 100, 100, 100, 100, 100),
-                new Slytherin("Gregory", "Goyle", 100, 100, 100, 100, 100, 100, 100),
 
-                new Kogtevran("Zhou", "Chang", 100, 100, 100, 100, 100, 100),
-                new Kogtevran("Padma", "Patil", 100, 100, 100, 100, 100, 100),
-                new Kogtevran("Marcus", "Belby", 100, 100, 100, 100, 100, 100),
+        Hogwarts hogwarts = new Hogwarts();
+        Griffindor griffindor1 = new Griffindor("Harry", " Potter", 56, 56, 56, 56, 56);
+        Griffindor griffindor2 = new Griffindor("Hermione", " Granger", 60, 60, 60, 60, 60);
+        Griffindor griffindor3 = new Griffindor("Ron", " Weasley", 70, 70, 70, 70, 70);
 
-                new Pyffendyi("Zachariah", "Smith", 100, 100, 100, 100, 100),
-                new Pyffendyi("Cedric", "Diggory", 100, 100, 100, 100, 100),
-                new Pyffendyi("Justin", "Finch-Fletchley", 100, 100, 100, 100, 100),
-        };
+        Slytherin slytherin1 = new Slytherin("Draco", " Malfoy", 60, 60, 60, 60, 60, 60, 60);
+        Slytherin slytherin2 = new Slytherin("Graham", " Montague", 71, 71, 71, 71, 71, 71, 71);
+        Slytherin slytherin3 = new Slytherin("Gregory", " Goyle", 72, 72, 72, 72, 72, 72, 72);
 
-        System.out.println("Количество учащихся " + stydents.length);
-        for (int i = 0; i < stydents.length; i++) {
-            Hogwarts hogwarts = stydents[i];
-            System.out.println("Имя - " + hogwarts.getName() + "; Фамилия - " + hogwarts.getLastName() + "; Сила магии = "
-                    + hogwarts.getPowerOfMagic());
-            // System.out.println(Arrays.toString(stydents));
-        }
+        Kogtevran kogtevran1 = new Kogtevran("Zhou", " Chang", 15, 15, 15, 15, 15, 15);
+        Kogtevran kogtevran2 = new Kogtevran("Padma", " Patil", 16, 16, 16, 16, 16, 16);
+        Kogtevran kogtevran3 = new Kogtevran("Marcus", " Belby", 17, 17, 17, 17, 17, 17);
+
+        Pyffendyi pyffendyi1 = new Pyffendyi("Zachariah", " Smith", 20, 20, 20, 20, 20);
+        Pyffendyi pyffendyi2 = new Pyffendyi("Cedric", " Diggory", 30, 30, 30, 30, 30);
+        Pyffendyi pyffendyi3 = new Pyffendyi("Justin", " Finch-Fletchley", 40, 40, 40, 40, 40);
+
+//Сделайте метод, который выводит на экран описание студента.
+        slytherin3.printInfo();
+        //  Реализуйте 4 метода, по одному для каждого факультета, которые сравнивают между собой двух учеников одного факультета
+        hogwarts.comparison(griffindor1, griffindor2,griffindor3);
+        hogwarts.comparison(slytherin1, slytherin2,slytherin3);
+        hogwarts.comparison(kogtevran1, kogtevran2,kogtevran3);
+        hogwarts.comparison(pyffendyi1, pyffendyi2,pyffendyi3);
+        //Реализуйте метод, который сравнивает двух любых учеников Хогвартса
+        hogwarts.comparison(pyffendyi1, slytherin2);
+
+
+
 
 
     }
